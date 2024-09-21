@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.botones {
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a {
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+}
+
+.botones a:focus {
+    background-color: rgb(50, 194, 194);
+}
+
+.greetings {
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.greetings > span {
+    opacity: 0; /* Inicialmente invisibles */
+    animation: glow 2s ease-in-out forwards; /* Las letras prenden una vez que la animación termine */
+}
+
+/* Animación de brillo */
+@keyframes glow {
+    0% {
+        color: #111; /* Sin brillo inicialmente */
+        text-shadow: none;
+        opacity: 1;
+    }
+    100% {
+        color: #f7c6d6;
+        text-shadow: 0 0 10px #ff80ab, 0 0 40px #ff80ab, 0 0 80px #ff80ab; /* Mantenerse encendido con brillo */
+        opacity: 1;
+    }
+}
+
+/* Secuencia de animaciones */
+.greetings > span:nth-child(1) { animation-delay: 0s; }    /* H */
+.greetings > span:nth-child(2) { animation-delay: 0.3s; }  /* o */
+.greetings > span:nth-child(3) { animation-delay: 0.6s; }  /* l */
+.greetings > span:nth-child(4) { animation-delay: 0.9s; }  /* a */
+.greetings > span:nth-child(5) { animation-delay: 1.2s; }  /* , */
+.greetings > span:nth-child(6) { animation-delay: 1.5s; }  /* espacio */
+.greetings > span:nth-child(7) { animation-delay: 1.8s; }  /* M */
+.greetings > span:nth-child(8) { animation-delay: 2.1s; }  /* i */
+.greetings > span:nth-child(9) { animation-delay: 2.4s; }  /* espacio */
+.greetings > span:nth-child(10) { animation-delay: 2.7s; } /* N */
+.greetings > span:nth-child(11) { animation-delay: 3s; }   /* i */
+.greetings > span:nth-child(12) { animation-delay: 3.3s; } /* ñ */
+.greetings > span:nth-child(13) { animation-delay: 3.6s; } /* a */
+.greetings > span:nth-child(14) { animation-delay: 3.9s; } /* espacio */
+.greetings > span:nth-child(15) { animation-delay: 4.2s; } /* B */
+.greetings > span:nth-child(16) { animation-delay: 4.5s; } /* o */
+.greetings > span:nth-child(17) { animation-delay: 4.8s; } /* n */
+.greetings > span:nth-child(18) { animation-delay: 5.1s; } /* i */
+.greetings > span:nth-child(19) { animation-delay: 5.4s; } /* t */
+.greetings > span:nth-child(20) { animation-delay: 5.7s; } /* a */
+.greetings > span:nth-child(21) { animation-delay: 6s; }   /* ! */
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px) {
+    .greetings {
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description {
+        font-size: 2rem;
+    }
+
+    .button a {
+        font-size: 1rem;
+    }
+}
